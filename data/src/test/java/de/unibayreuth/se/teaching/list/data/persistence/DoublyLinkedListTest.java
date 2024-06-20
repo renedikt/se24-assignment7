@@ -234,6 +234,13 @@ class DoublyLinkedListTest {
         Assertions.assertEquals("0.9<->0.5<->0.4", list.toString());
     }
 
+    @Test
+    void testInsertDoubleInEmptyList() {
+        Assertions.assertTrue(list.isEmpty());
+        list.insert(0.9);
+        Assertions.assertArrayEquals(new double[]{0.9}, list.asArray());
+    }
+
     /**
      * Helper method to test begin and end pointers of a doubly linked list
      * @param list List to test
